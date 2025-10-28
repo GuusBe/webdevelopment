@@ -1,0 +1,27 @@
+.linkfield {
+    padding: 3px 0 3px !important;
+    border-width: 0 !important;
+}
+
+.linkfield .field {
+    margin-bottom: 0 !important;
+}
+
+.linkfield--settings {
+    margin-top: 7px !important;
+}
+
+.linkfield--settings .field > .heading {
+    display: none !important;
+}
+
+/* Units */
+.field[data-type="nystudio107\\units\\fields\\Units"] > .input {
+    display: flex;
+    align-items: flex-end;
+}
+
+.field[data-type="nystudio107\\units\\fields\\Units"] > .input > .field {
+    margin-right: 12px;
+    margin-bottom: 0;
+}
