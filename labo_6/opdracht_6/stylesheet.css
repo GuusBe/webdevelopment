@@ -1,0 +1,42 @@
+/* Algemene opmaak */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #002147;
+    padding: 30px;
+}
+
+/* Titel */
+h1 {
+    font-variant: small-caps;
+    background-color: #e63946;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Checklist basis */
+ul.checklist {
+    list-style: none;   /* standaard bolletjes weghalen */
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Alle items krijgen icoontje aan linkerkant */
+ul.checklist li {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px;
+    padding-left: 30px;  /* ruimte voor icoon */
+    margin-bottom: 8px;
+}
+
+/* Niet-aangevinkte items */
+ul.checklist li {
+    background-image: url('unchecked.png'); /* leeg vakje icoon */
+}
+
+/* Aangevinkte items */
+ul.checklist li.checked {
+    background-image: url('checked.png'); /* vinkje icoon */
+}
