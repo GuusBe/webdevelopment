@@ -1,40 +1,51 @@
-body
-{
-    font-family: Helvetica;
+/* Algemene instellingen */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-h1
-{
-    color: #EDF2F4;
-    font-size: 80px;
 
+/* Header */
+header {
+    background-color: #2B2D42;
+    color: #8D99AE;
+    padding: 30px;
+    margin-bottom: 10px; /* witruimte onder de header */
 }
-h2
-{
+
+header h1,
+header h2 {
     color: #EDF2F4;
+}
+
+header h1 {
+    font-size: 80px;
+}
+
+header h2 {
     font-size: 40px;
 }
-a
-{
-    color: #EF233C;
-}
-header
-{
-    background-color: #2B2D42;
-    margin-bottom: 10px;
-    padding: 30px;
-}
-footer
-{
-    background-color: #2B2D42;
-    margin-top: 10px;
-    padding: 30px;
-}
-main
-{
+
+/* Education sectie */
+.education {
     background-color: #8D99AE;
     padding: 30px;
 }
-h2 main
-{
-    color: #EDF2F4;
+
+/* Footer */
+footer {
+    background-color: #2B2D42;
+    color: #8D99AE;
+    padding: 30px;
+    margin-top: 10px; /* witruimte boven de footer */
+}
+
+/* Links */
+a {
+    color: #EF233C;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
