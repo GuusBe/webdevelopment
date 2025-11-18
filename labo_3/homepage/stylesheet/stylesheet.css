@@ -1,0 +1,82 @@
+/* Algemene body en font */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #004488;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Persoonlijke info en lijsten */
+.persoonlijke-info h2 {
+    color: #004488;
+    margin-top: 20px;
+}
+
+.persoonlijke-info ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.persoonlijke-info li {
+    margin: 5px 0;
+}
+
+/* Afbeeldingen */
+.persoonlijke-info img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Prognose tabel */
+.tabel-prognose {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tabel-prognose th {
+    background-color: #004488;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tabel-prognose td {
+    border: 1px solid #004488;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabel-prognose tbody tr:nth-child(even) {
+    background-color: #e1eef4;
+}
+
+.tabel-prognose tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Ronde hoeken bovenkant tabel */
+.tabel-prognose thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.tabel-prognose thead th:last-child {
+    border-top-right-radius: 10px;
+}
