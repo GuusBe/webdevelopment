@@ -1,0 +1,60 @@
+/* Algemene stijl voor de tabel */
+.vrienden {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* Cellen */
+.vrienden th,
+.vrienden td {
+    padding: 12px 15px;
+    border: 1px solid #004488;
+    text-align: center;
+}
+
+/* Koptekst */
+.vrienden thead {
+    background: linear-gradient(to bottom, #004488 0%, #4169E1 100%);
+    color: white;
+}
+
+/* Afwisselende rijen */
+.vrienden tbody tr:nth-child(even) {
+    background-color: #dbe9f4;
+}
+
+.vrienden tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Ronde hoeken koptekst */
+.vrienden thead tr th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.vrienden thead tr th:last-child {
+    border-top-right-radius: 20px;
+}
+
+/* Ronde hoeken onderkant */
+.vrienden tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.vrienden tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+/* Onbekende gegevens – altijd rood, ook in alt-rijen */
+.vrienden tbody td.onbekend,
+.vrienden tbody .alt td.onbekend {
+    background-color: red;
+    color: white; /* optioneel, voor contrast */
+}
