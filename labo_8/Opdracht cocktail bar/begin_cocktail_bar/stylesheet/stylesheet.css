@@ -1,0 +1,132 @@
+/*
+ * lounge.css
+ */
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#wrapper {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Header neemt de volledige breedte boven de kolommen */
+header {
+    width: 100%;
+    margin-bottom: 20px;
+    order: 1;
+    text-align: center; /* Belangrijk voor het centreren van de afbeelding */
+}
+
+/* De afbeelding wordt nu gecentreerd en behoudt zijn originele afmetingen */
+#imgHeader {
+    /* De max-width zorgt ervoor dat deze niet uit de container valt */
+    max-width: 100%;
+    height: auto;
+    display: block; /* Belangrijk voor het correct centreren van een block element */
+    margin: 0 auto; /* Centreert de afbeelding horizontaal binnen de header */
+}
+
+/* Kolommen onder de header */
+#content {
+    width: 70%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    order: 2;
+}
+
+#elixirs {
+    width: 30%;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    order: 3;
+    padding: 15px;
+}
+
+/* Footer komt onder alles */
+footer {
+    width: 100%;
+    order: 4;
+    clear: both;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 0.6em;
+    color: #666;
+}
+
+/* Stijlen voor koppen */
+h1, h2 {
+    color: #007e7e;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 130%;
+}
+
+/* Specials-specifieke stijlen */
+#elixirs h1 {
+    color: #cc0066;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#elixirs h2 {
+    color: #c99300;
+    font-size: 110%;
+    margin-bottom: 0.2em;
+}
+
+#elixirs img {
+    display: block;
+    margin: 10px auto 5px;
+}
+
+#elixirs p:last-of-type a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    background-color: transparent;
+}
+
+#elixirs p:last-of-type a:hover {
+    background-color: #8b4513;
+    color: white;
+}
+
+/* Highlight blok */
+.color {
+    margin: 30px;
+    padding: 20px;
+    color: #444444;
+    background-color: #a7cece;
+    border: 2px dashed #ffffff;
+    border-radius: 5px;
+}
+
+/* Tekststijlen */
+.cd {
+    font-style: italic;
+}
