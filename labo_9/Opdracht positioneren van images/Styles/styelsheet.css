@@ -10,12 +10,10 @@ main {
 article {
     margin-bottom: 10px;
     overflow: auto;
+    border-style: solid;
 }
 
-p {
-    overflow: hidden;
-    padding: 0;
-}
+
 
 
 article:nth-child(odd) img {
