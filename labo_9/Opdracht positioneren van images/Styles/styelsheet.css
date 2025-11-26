@@ -1,0 +1,31 @@
+body {
+    font-size: 1.25em;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    margin: 0 10px;
+}
+
+article {
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+p {
+    overflow: hidden;
+    padding: 0;
+}
+
+
+article:nth-child(odd) img {
+    float: left;
+    margin-right: 10px;
+}
+
+
+article:nth-child(even) img {
+    float: right;
+    margin-left: 10px;
+
+}
