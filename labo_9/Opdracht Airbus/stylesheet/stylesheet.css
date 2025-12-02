@@ -1,11 +1,8 @@
-
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
     margin: 0;
 }
-
 
 .container {
     width: 95%;
@@ -17,10 +14,9 @@ a:hover {
     color: red !important;
 }
 
-
 header {
     height: 200px;
-    background-image: url("images/bgsky3.jpg");
+    background-image: url('../images/bgsky3.jpg');
     background-size: cover;
     background-position: center;
     color: darkblue;
@@ -55,8 +51,13 @@ header {
     z-index: 10;
 }
 
-
-
+main {
+    width: 74%;
+    margin-right: 10px;
+    margin-top: 0;
+    box-sizing: border-box;
+    float: left;
+}
 
 .news-area {
     width: 25%;
@@ -64,6 +65,7 @@ header {
     border: 1px solid #999999;
     box-sizing: border-box;
     float: right;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -83,17 +85,6 @@ header {
     margin: 0;
 }
 
-
-
-main {
-    width: 75%;
-    margin-right: 10px;
-    box-sizing: border-box;
-    float: left;
-}
-
-
-
 .introduction {
     background-color: white;
     color: black;
@@ -108,7 +99,6 @@ main {
 }
 
 .introduction p {
-    /* FIX: Voeg padding-top en padding-bottom toe aan de P om de 20px te creëren */
     padding: 20px 30px 20px 0;
     margin: 0;
 }
@@ -119,30 +109,33 @@ main {
     font-style: italic;
 }
 
-/*
-==================================================
-4.2 Galerijgebied ("gallery") - FIX: Precisie marges
-==================================================
-*/
-
+/* GALERIJ STIJLEN - De float: left maakt het 3x3 raster */
 .gallery {
     background-color: #999999;
-    /* Padding links en boven voor de 20px afstand rondom */
+    /* 20px padding links en boven voor de afstand van 20px tot de randen */
     padding: 20px 0 0 20px;
-    overflow: hidden;
+    overflow: hidden; /* Houdt de zwevende foto's binnen de container */
 }
 
 .photo-frame {
+    /* Vaste grootte voor de afbeelding (180x180) */
     width: 180px;
     height: 180px;
+
+    /* 10px witte ruimte rondom de foto */
     padding: 10px;
     background-color: white;
+
+    /* Rand: 1px stippellijn */
     border: 1px dotted #999999;
 
-    /* FIX: 20px rechts en 20px onder. Dit creëert de correcte spacing voor 3 kolommen. */
+    /* 20px ruimte rechts en onder, essentieel voor de 3-kolom indeling */
     margin: 0 20px 20px 0;
 
+    /* Dit zorgt ervoor dat de kaders naast elkaar komen */
     float: left;
+
+    /* Zorgt dat 180px de binnenmaat is (padding en border komen erbij) */
     box-sizing: content-box;
 }
 
@@ -151,13 +144,6 @@ main {
     height: 100%;
     display: block;
 }
-
-
-/*
-==================================================
-5. Onderkant ("bottom") - FIX: Lijststijlen en opsommingstekens
-==================================================
-*/
 
 .bottom-footer {
     width: 100%;
@@ -174,17 +160,15 @@ main {
     margin-left: 120px;
 }
 
-/* FIX: Styling voor alle lijsten */
 .bottom-footer ul {
-    list-style: disc; /* Standaard bolletjes */
-    padding-left: 1.5em; /* Standaard inspringing */
+    list-style: disc;
+    padding-left: 1.5em;
     margin: 0;
 }
 
-/* FIX: Styling voor sublijsten (Aircrafts en Toulouse) - Gebruik een cirkel voor de sublijsten */
 .bottom-footer ul ul {
-    list-style: circle; /* Cirkel voor sublijsten */
-    padding-left: 1em; /* Minder inspringen dan de hoofdlijst */
+    list-style: circle;
+    padding-left: 1em;
 }
 
 .bottom-footer a {
@@ -192,18 +176,11 @@ main {
     text-decoration: none;
 }
 
-/*
-==================================================
-6. Copyrightgebied ("copyright") - FIX: Marges/padding
-==================================================
-*/
-
 .copyright {
     width: 100%;
     text-align: center;
     background-color: white;
     color: black;
-    /* FIX: De padding in de afbeelding is minimaal */
     padding: 5px 0;
 }
 
