@@ -1,0 +1,212 @@
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+a:hover {
+    color: red !important;
+}
+
+
+header {
+    height: 200px;
+    background-image: url("images/bgsky3.jpg");
+    background-size: cover;
+    background-position: center;
+    color: darkblue;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.top-title {
+    font-size: 300%;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sub-title {
+    font-size: 240%;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.airplane-image {
+    position: absolute;
+    right: 250px;
+    bottom: 60px;
+    z-index: 10;
+}
+
+
+
+
+.news-area {
+    width: 25%;
+    background-color: #dddddd;
+    border: 1px solid #999999;
+    box-sizing: border-box;
+    float: right;
+    margin-bottom: 0;
+}
+
+.news-area h3 {
+    color: white;
+    background-color: blue;
+    text-align: center;
+    font-size: 120%;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.news-area p {
+    color: #666666;
+    font-size: 90%;
+    padding: 10px;
+    margin: 0;
+}
+
+
+
+main {
+    width: 75%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    float: left;
+}
+
+
+
+.introduction {
+    background-color: white;
+    color: black;
+    text-align: justify;
+    padding: 0;
+    overflow: hidden;
+}
+
+.introduction .logo {
+    float: left;
+    margin: 0 20px 0 20px;
+}
+
+.introduction p {
+    /* FIX: Voeg padding-top en padding-bottom toe aan de P om de 20px te creëren */
+    padding: 20px 30px 20px 0;
+    margin: 0;
+}
+
+.blue-text {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*
+==================================================
+4.2 Galerijgebied ("gallery") - FIX: Precisie marges
+==================================================
+*/
+
+.gallery {
+    background-color: #999999;
+    /* Padding links en boven voor de 20px afstand rondom */
+    padding: 20px 0 0 20px;
+    overflow: hidden;
+}
+
+.photo-frame {
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    background-color: white;
+    border: 1px dotted #999999;
+
+    /* FIX: 20px rechts en 20px onder. Dit creëert de correcte spacing voor 3 kolommen. */
+    margin: 0 20px 20px 0;
+
+    float: left;
+    box-sizing: content-box;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/*
+==================================================
+5. Onderkant ("bottom") - FIX: Lijststijlen en opsommingstekens
+==================================================
+*/
+
+.bottom-footer {
+    width: 100%;
+    background-color: #666666;
+    color: white;
+    line-height: 2em;
+    padding: 20px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.footer-block {
+    float: left;
+    margin-left: 120px;
+}
+
+/* FIX: Styling voor alle lijsten */
+.bottom-footer ul {
+    list-style: disc; /* Standaard bolletjes */
+    padding-left: 1.5em; /* Standaard inspringing */
+    margin: 0;
+}
+
+/* FIX: Styling voor sublijsten (Aircrafts en Toulouse) - Gebruik een cirkel voor de sublijsten */
+.bottom-footer ul ul {
+    list-style: circle; /* Cirkel voor sublijsten */
+    padding-left: 1em; /* Minder inspringen dan de hoofdlijst */
+}
+
+.bottom-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/*
+==================================================
+6. Copyrightgebied ("copyright") - FIX: Marges/padding
+==================================================
+*/
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    color: black;
+    /* FIX: De padding in de afbeelding is minimaal */
+    padding: 5px 0;
+}
+
+.copyright p {
+    margin: 0;
+}
