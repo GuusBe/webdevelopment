@@ -46,7 +46,7 @@ header {
 
 .airplane-image {
     position: absolute;
-    right: 250px;
+    left: 60%;
     bottom: 60px;
     z-index: 10;
 }
@@ -95,7 +95,7 @@ main {
 
 .introduction .logo {
     float: left;
-    margin: 0 20px 0 20px;
+    margin: 20px 20px 0 20px;
 }
 
 .introduction p {
@@ -112,9 +112,11 @@ main {
 /* GALERIJ STIJLEN - De float: left maakt het 3x3 raster */
 .gallery {
     background-color: #999999;
-    /* 20px padding links en boven voor de afstand van 20px tot de randen */
+    /* 20px padding links en boven (voor de afstand tot de randen) */
     padding: 20px 0 0 20px;
-    overflow: hidden; /* Houdt de zwevende foto's binnen de container */
+
+    /* Zorgt ervoor dat alle elementen in de container blijven */
+    overflow: hidden;
 }
 
 .photo-frame {
@@ -122,20 +124,20 @@ main {
     width: 180px;
     height: 180px;
 
-    /* 10px witte ruimte rondom de foto */
+    /* 10px witte ruimte rondom de foto (padding) */
     padding: 10px;
     background-color: white;
 
     /* Rand: 1px stippellijn */
     border: 1px dotted #999999;
 
-    /* 20px ruimte rechts en onder, essentieel voor de 3-kolom indeling */
+    /* 20px ruimte rechts en 20px onder, essentieel voor de 3-kolom indeling */
     margin: 0 20px 20px 0;
 
-    /* Dit zorgt ervoor dat de kaders naast elkaar komen */
+    /* Zorgt ervoor dat de kaders naast elkaar komen */
     float: left;
 
-    /* Zorgt dat 180px de binnenmaat is (padding en border komen erbij) */
+    /* Zorgt dat 180px de binnenmaat is */
     box-sizing: content-box;
 }
 
