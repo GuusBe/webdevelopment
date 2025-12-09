@@ -1,0 +1,24 @@
+
+// choices.js on multi-select field
+var elements = document.querySelectorAll('.js-choice');
+for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    var multiSelect = element.querySelector('select');
+
+    const choices = new Choices(multiSelect, {
+        searchFloor: 0,
+        removeItemButton: true,
+        allowHTML: false,
+        shouldSort: false,
+        loadingText: Craft.t("mounteqshop","translate.mounteqshop.loading"),
+        noResultsText: Craft.t("mounteqshop","translate.mounteqshop.noResults"),
+        noChoicesText: Craft.t("mounteqshop","translate.mounteqshop.noChoices"),
+        itemSelectText: Craft.t("mounteqshop", "translate.mounteqshop.pressSelect"),
+        classNames: {
+            input: 'text',
+        },
+        addItemText: (value) => {
+            return Craft.t("mounteqshop","translate.mounteqshop.pressEnter") + ` <b>"${value}"</b>`;
+        },
+    });
+}

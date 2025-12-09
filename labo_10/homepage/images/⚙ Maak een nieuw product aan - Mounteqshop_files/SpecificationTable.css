@@ -1,0 +1,47 @@
+/*
+ Fancy backend css
+ */
+
+.u-textLeft {
+    text-align: left !important;
+}
+
+.bool-cell button {
+    margin-top: 8px;
+}
+
+.specificationTable-unitField-wrapper {
+    display: flex;
+}
+
+.specificationTable-unitField.unitField-value {
+    width: 100px;
+    border-right: 1px solid rgba(51,64,77,.1);
+    margin-right: 5px;
+}
+
+table.dp-specifications-table.editable tbody tr td.hidden-cell + td {
+    border-left: 0;
+}
+
+table.dp-specifications-table.editable tbody tr td.singleline-cell {
+    background-color: #f3f7fc;
+    color: #596673;
+    font-weight: normal;
+}
+
+table.dp-specifications-table.editable tbody tr td.textual:last-child {
+    padding: 4px 10px;
+}
+
+table.dp-specifications-table.editable tbody tr td.textual:last-child input.text,
+table.dp-specifications-table.editable tbody tr td.textual:last-child textarea {
+    border-radius: 3px;
+    border: 1px solid rgba(96,125,159,.25);
+    background-color: #fbfcfe;
+    background-clip: padding-box;
+}
+
+table.dp-specifications-table.editable tbody tr td.textual:last-child select {
+    min-width: 100px;
+}

@@ -1,0 +1,130 @@
+$(document).ready(function(){
+
+    // only show scan barcode code when editing
+    if($('#order-edit-btn').length) {
+        $('#order-edit-btn').on('click',function() {
+            $('#js-button-scan-barcode').show();
+        });
+    } else {
+        $('#js-button-scan-barcode').show();
+    }
+
+    // init and show modal when clicking scan barcode button
+    $('#js-button-scan-barcode').on('click',function() {
+        if(typeof $modal === 'undefined') {
+            $modal = new Garnish.Modal($('#modalBarcode'), {
+                draggable: true,
+                onShow: () => {
+                    // close modal
+                    $('.btn.cancel', $('#modalBarcode')).on({
+                        click: () => {
+                            $('#modalBarcode').data('modal').hide();
+                        },
+                    });
+                },
+                onHide: () => {
+                    // don't focus input field anymore
+                    $('.js-input-barcode').trigger('blur');
+                    $('.js-input-barcode').val('');
+                    // hide errors
+                    removeErrors();
+                },
+            });
+        } else {
+            $modal.show();
+        }
+
+        // focus barcode input field
+        setTimeout(function() {
+            $('.js-input-barcode').trigger('focus');
+        }, 100);
+    });
+
+    // search barcode on pressing enter
+    $('.js-input-barcode').keyup(function(e) {
+        if(e.keyCode == 13) {
+            searchByBarcode($(this).val());
+        }
+    });
+});
+
+function searchByBarcode(barcode = '') {
+
+    if(barcode.length < 3) {
+        return false;
+    }
+
+    // crsf token
+    var token = $('[name="CRAFT_CSRF_TOKEN"]').val();
+
+    // show loader
+    $('#js-barcode-spinner').removeClass('hidden');
+
+    // remove errors
+    removeErrors();
+
+    // resized modal to accommodate for removed errors
+    $modal.updateSizeAndPosition();
+
+    // search prodcuct via ajax
+    $.ajax({
+        type: "POST",
+        dataType: 'json',
+        headers: {
+            "X-CSRF-Token" : token,
+        },
+        url: '/actions/admin-module/barcode/search', // modules/adminmodule/src/controllers/BarcodeController.php
+        data: {
+            'barcode': barcode,
+        },
+        success: function (variant) {
+            // no results
+            if(variant == '') {
+                console.log('not found');
+            } else {
+                // add result to order
+                window.OrderDetailsApp.$children[0].addLineItem([{
+                    id: null,
+                    lineItemStatusId: null,
+                    qty: '1',
+                    note: '',
+                    privateNote: '',
+                    orderId: this.orderId,
+                    purchasableId: variant.id, //  purchasableId
+                    options: [],
+                    adjustments: [],
+                    salePrice: variant.salePrice,
+                }]);
+
+                // select input
+                $('.js-input-barcode').trigger('focus');
+                $('.js-input-barcode').trigger('select');
+            }
+            // hide loader
+            $('#js-barcode-spinner').addClass('hidden');
+        },
+        error: function(data) {
+
+            // show error
+            $('.js-input-barcode').addClass('error');
+            $('.js-input-barcode-errors').removeClass('hidden');
+            $('.js-input-barcode-errors').html('<li>' + lblErrorSearch +'</li>');
+
+            // hide loader
+            $('#js-barcode-spinner').addClass('hidden');
+
+            // select input
+            $('.js-input-barcode').trigger('focus');
+            $('.js-input-barcode').trigger('select');
+
+            $modal.updateSizeAndPosition();
+            Garnish.shake($('#modalBarcode'));
+        }
+    });
+}
+
+function removeErrors() {
+    $('.js-input-barcode-errors').addClass('hidden');
+    $('.js-input-barcode-errors').html('');
+    $('.js-input-barcode').removeClass('error');
+}

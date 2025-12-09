@@ -1,0 +1,42 @@
+/* stylesheet/stylesheet.css */
+
+/* Algemene body en font */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f1f8ff; /* Lichtere blauwe achtergrond */
+    color: #333;
+}
+
+/* De blauwe kleur van de header en titels is nu de Bootstrap 'primary' kleur (#0d6efd) */
+
+/* Stijl voor de Sidebar Card */
+.sidebar-card {
+    background-color: #ffffff;
+    border: 1px solid #d0e7ff;
+}
+
+/* Links in de zijbalk, in lijn met uw oorspronkelijke styling */
+.sidebar-card a {
+    color: #004488;
+    font-weight: bold;
+}
+
+/* Aanpassingen voor de tabel (meeste styling komt van Bootstrap) */
+.table th {
+    /* Zorgt voor consistentie met uw originele text-align */
+    text-align: center;
+}
+
+/* Uw oorspronkelijke donkerblauwe kleur, indien de Bootstrap primary kleur niet bevalt: */
+/*
+.bg-primary {
+    background-color: #004488 !important;
+}
+.text-primary {
+    color: #004488 !important;
+}
+.table-primary {
+    --bs-table-bg: #004488;
+}
+*/
