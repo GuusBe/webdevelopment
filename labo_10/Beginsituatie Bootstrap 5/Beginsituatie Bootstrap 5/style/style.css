@@ -1,0 +1,35 @@
+.custom-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.grid-item {
+    min-height: 400px;
+    border: 10px solid white;
+}
+
+/* Standaard Mobile kleur (1 kolom) */
+.grid-item {
+    background-color: #e9ecef;
+}
+
+
+/* Tablet Modus: 2 kolommen */
+@media (min-width: 768px) {
+    .custom-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Kleur aanpassing voor 2 kolommen */
+    .grid-item:nth-child(even) {
+        background-color: #adb5bd;
+    }
+}
+
+/* Desktop Modus: 4 kolommen */
+@media (min-width: 992px) {
+    .custom-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

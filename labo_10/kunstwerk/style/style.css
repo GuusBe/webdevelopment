@@ -1,0 +1,61 @@
+/* style/style.css */
+
+/* UNIFORME RAND: De dikte van de lijnen is niet belangrijk, dus 5px solid black voor alle blokken */
+#a, #b, #c, #d, #e, #f, #g {
+    border: 5px solid black;
+    padding: 0;
+}
+
+/* De kleuren en hoogtes blijven behouden volgens uw originele vereisten */
+#a {
+    min-height: 165px;
+    background: rgb(255, 255, 255);
+}
+#b {
+    min-height: 190px;
+    background: rgb(255, 255, 255);
+}
+#c {
+    min-height: 370px;
+    background: rgb(220, 40, 26);
+}
+#d {
+    min-height: 150px;
+    background: rgb(0, 93, 159);
+}
+#e {
+    min-height: 150px;
+    background: rgb(255, 255, 255);
+}
+#f {
+    min-height: 70px;
+    background: rgb(255, 255, 255);
+}
+#g {
+    min-height: 70px;
+    background-color: rgb(242, 224, 122);
+}
+
+/* Aanvullende CSS voor de structuur van het canvas */
+
+/* Zorgt ervoor dat de kolommen correct de hoogte van de rij gebruiken */
+.mondriaan-canvas {
+    height: 355px;
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+.mondriaan-canvas-bottom {
+    height: 150px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mondriaan-canvas [class^="col-"], .mondriaan-canvas-bottom [class^="col-"] {
+    padding: 0;
+    height: 100%;
+}
+
+/* Zorgt ervoor dat A/B en F/G 100% van hun geneste kolom innemen */
+#a, #b, #f, #g {
+    width: 100%;
+}
