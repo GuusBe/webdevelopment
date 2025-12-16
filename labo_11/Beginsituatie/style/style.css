@@ -1,0 +1,110 @@
+/* Globale stijlen voor de container */
+body > div {
+    display: grid;
+    /* Basislay-out: 3 kolommen (1fr 2fr 1fr) */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Basislay-out: 3 rijen */
+    grid-template-rows: repeat(3, auto);
+    /* Definitie van de Grid Areas op basis van de gewenste 3x3 lay-out (zie de afbeelding) */
+    grid-template-areas:
+        "negen twee een"
+        "vier vijf zes"
+        "zeven acht drie";
+    gap: 10px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Stijlen van de items, inclusief de kleuren uit de opdracht */
+div div {
+    color: white;
+    font-size: 3em;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Kleuren van de items */
+.item-1 {
+    background: #b03532;
+    grid-area: een; /* Positie in de 3x3 matrix (boven rechts) */
+}
+.item-2 {
+    background: #33a8a5;
+    grid-area: twee; /* Positie in de 3x3 matrix (boven midden) */
+}
+.item-3 {
+    background: #30997a;
+    grid-area: drie; /* Positie in de 3x3 matrix (onder rechts) */
+}
+.item-4 {
+    background: #6a478f;
+    grid-area: vier; /* Positie in de 3x3 matrix (midden links) */
+}
+.item-5 {
+    background: #da6f2b;
+    grid-area: vijf; /* Positie in de 3x3 matrix (midden midden) */
+}
+.item-6 {
+    background: #3d8bb1; /* Let op: kleur voor item-6 niet gegeven, gebruik een willekeurige */
+    grid-area: zes; /* Positie in de 3x3 matrix (midden rechts) */
+}
+.item-7 {
+    background: #e03f3f;
+    grid-area: zeven; /* Positie in de 3x3 matrix (onder links) */
+}
+.item-8 {
+    background: #59a627;
+    grid-area: acht; /* Positie in de 3x3 matrix (onder midden) */
+}
+.item-9 {
+    background: #4464a1;
+    grid-area: negen; /* Positie in de 3x3 matrix (boven links) */
+}
+
+/* Media Query voor schermen kleiner dan 760px */
+@media (max-width: 760px) {
+    body > div {
+        /* Pas de Grid aan naar 1 kolom */
+        grid-template-columns: 1fr;
+        /* Annuleer de grid areas definitie */
+        grid-template-areas: none;
+        /* Stel de rijen in op 'auto' (niet noodzakelijk maar goed voor de consistentie) */
+        grid-template-rows: repeat(9, auto);
+    }
+
+    /* Definieer de nieuwe verticale volgorde (4, 7, 9, 3, 2, 5, 8, 1, 6) met 'order' */
+    /* De item-nummers in de 3x3 matrix zijn:
+       Rij 1: 9, 2, 1
+       Rij 2: 4, 5, 6
+       Rij 3: 7, 8, 3
+       De gewenste volgorde voor smal scherm is: 4, 7, 9, 3, 2, 5, 8 */
+
+    .item-4 {
+        order: 1;
+    }
+    .item-7 {
+        order: 2;
+    }
+    .item-9 {
+        order: 3;
+    }
+    .item-3 {
+        order: 4;
+    }
+    .item-2 {
+        order: 5;
+    }
+    .item-5 {
+        order: 6;
+    }
+    .item-8 {
+        order: 7;
+    }
+    /* De overige items (1 en 6) worden achteraan geplaatst volgens de HTML-volgorde */
+    .item-1 {
+        order: 8;
+    }
+    .item-6 {
+        order: 9;
+    }
+}
