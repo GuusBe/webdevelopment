@@ -5,6 +5,7 @@ html {
 
 
 body {
+    display: flex;
     font-family: sans-serif;
     margin: 0;
     background-color: #b4d455;
@@ -63,9 +64,20 @@ a {
 }
 
 .container {
-/* flex-eigenschappen */
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .card {
-    /* flex-eigenschappen */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
 }
