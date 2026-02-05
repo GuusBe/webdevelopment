@@ -1,0 +1,66 @@
+body{
+    background-image: url("download.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: blue;
+    background-color: black;
+    text-shadow: 50px 50px 50px black;
+    text-align: center;
+}
+h1 + h2{
+    color: orange;
+}
+h2{
+    color: red;
+}
+.class1{
+    font-family: Helvetica;
+    font-style: italic;
+}
+p:first-letter{
+    font: bold 30px Helvetica;
+}
+
+::selection{
+    background-color: green;
+}
+a:hover{
+    background-color: yellow;
+}
+p:last-of-type{
+    background-color: blue;
+}
+div{
+    font-family: Helvetica;
+    border: 1px solid red;
+    padding: 10px;
+}
+img{
+    border-style: solid;
+}
+#box1{
+    background-color: green;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+}
+#box2{
+    background-color: yellow;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+}
+#box3{
+    background-color: blue;
+    width: 125px;
+    height: 125px;
+    position: absolute;
+}
+#box4{
+    background-color: red;
+    width: 63px;
+    height: 63px;
+    position: absolute;
+}

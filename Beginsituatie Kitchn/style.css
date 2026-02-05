@@ -1,0 +1,182 @@
+/** Volgende CSS gaan we ze geven **/
+.respimg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+body{
+    font-family: helvetica, sans-serif;
+}
+h1{
+    font-size:2.5em;
+    text-transform: uppercase;
+    border-bottom: 2px black solid;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+h2{
+    font-size:1.5rem;
+    margin-bottom: 1rem;
+}
+header{
+    border-bottom:1px #ebe8e8;
+    margin: 0 auto;
+    height: 50px;
+    width: 600px;
+}
+header img{
+    height: 50px;
+}
+
+nav{
+    width: 600px;
+    margin: 0 auto;
+}
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    width: auto;
+    margin: 0;
+}
+nav ul li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: auto auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-right: 1px #ebe8e8;
+    color: #5b4746;
+    font-size: 13px;
+}
+nav ul li:last-child a{
+    border-right: none;
+}
+a:hover{
+    text-decoration: underline 2px #fff100;
+}
+main{
+    width: 100%;
+    border-top:10px red;
+}
+main header{
+    height: 500px;
+    width: 100%;
+    background-image: url("images/headerimage.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main header h1{
+    margin: 0;
+    color: white;
+    font-size: 40px;
+    border-bottom: 0;
+    text-shadow: 2px 2px 2px #8D99AE;
+}
+@media (min-width: 800px) {
+    main header{
+        font-size: 5em;
+    }
+}
+section{
+    width: 600px;
+    margin: 50px auto 0 auto;
+}
+section article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-right: 1.5em;
+    padding-top: 1em;
+    border-top: 1px #ddd;
+}
+section article h2{
+    text-transform: uppercase;
+    color: #ff4d56;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+section article p{
+    color: #666;
+    line-height: 2;
+}
+section article footer{
+    font-style: italic;
+    padding-right: 10px;
+    border-right: 1px #ebe8e8;
+}
+section article footer time{
+    color: #666;
+    padding-left: 10px;
+}
+aside{
+    margin: 50px auto auto auto;
+    width: 600px;
+}
+.grid{
+    display: block;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+footer{
+    border-top: 1px #ebe8e8;
+    line-height: 2em;
+    padding: 20px;
+}
+#left{
+    width:50%;
+    float: left;
+    text-align: right;
+    ;
+}
+#right{
+    width:50%;
+    float: right;
+    text-align: left;
+
+}
+@media (min-width: 770px) {
+    header{
+        width: 750px
+    }
+    nav{
+        width: 750px
+    }
+    section {
+        width: 750px
+    }
+    aside{
+        width: 750px
+    }
+    .grid{
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 1000px) {
+    header{
+        width: 980px;
+    }
+    nav{
+        width: 980px;
+    }
+    section{
+        width: 980px;
+    }
+    aside{
+        width: 980px;
+    }
+    .grid{
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
