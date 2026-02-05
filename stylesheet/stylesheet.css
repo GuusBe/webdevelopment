@@ -1,0 +1,72 @@
+/* Basis styling voor het hele scherm */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f172a; /* Donkerblauw/zwart */
+    color: #f1f5f9;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 10px;
+}
+
+/* Container voor alle kaarten */
+.dashboard {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Elke kaartje */
+.lab-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+.lab-card:hover {
+    transform: scale(1.02);
+    border-color: #38bdf8;
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    color: #94a3b8;
+}
+
+/* De Grote Knop-stijl voor de links */
+a {
+    display: block;          /* Maakt de link breed */
+    padding: 15px;           /* Veel ruimte om op te klikken */
+    background: #2563eb;     /* Helder blauw */
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect voor de knop */
+a:hover {
+    background: #3b82f6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Feedback als je de knop echt indrukt */
+a:active {
+    transform: translateY(2px);
+}
