@@ -9,14 +9,11 @@ const setup = () => {
 
 	// maak het blokje rood
 	colorDemos[0].style.backgroundColor="red";
-
 }
 
 const update = () => {
 	let sliders = document.getElementsByClassName("slider");
-    let colorDemos=document.getElementsByClassName("colorDemo");
 	let value=sliders[0].value;
-    colorDemos[0].style.backgroundColor=value;
 	console.log("de waarde van de slider is momenteel : "+value);
 }
 
