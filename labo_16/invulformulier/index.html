@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Picker</title>
+
+</head>
+<form id="mijnFormulier" action="#" method="post">
+
+    <fieldset>
+        <legend>Persoonlijke informatie</legend>
+        <div class="row">
+            <label for="voornaam">Voornaam*:</label>
+            <input type="text" id="voornaam" name="voornaam" placeholder="Your first name" required>
+        </div>
+        <div class="row">
+            <label for="familienaam">Familienaam*:</label>
+            <input type="text" id="familienaam" name="familienaam" placeholder="Your last name" required>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Sport</legend>
+        <p style="margin: 5px 0;">Welke sport beoefen je?</p>
+        <input type="checkbox" id="lopen" name="sport"> <label for="lopen" style="width:auto;">Lopen</label><br>
+        <input type="checkbox" id="zwemmen" name="sport"> <label for="zwemmen" style="width:auto;">Zwemmen</label><br>
+        <input type="checkbox" id="roeien" name="sport"> <label for="roeien" style="width:auto;">Roeien</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Communicatievoorkeur</legend>
+        <p style="margin: 5px 0;">Hoe kunnen we je bereiken?</p>
+        <input type="radio" id="post" name="contact" value="post"> <label for="post" style="width:auto;">Per post</label><br>
+        <input type="radio" id="email_r" name="contact" value="email"> <label for="email_r" style="width:auto;">E-mail</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Favorieten</legend>
+        <div class="row">
+            <label for="film">Favoriete film:</label>
+            <input type="text" id="film">
+        </div>
+        <div class="row">
+            <label for="quote">Favoriete quote:</label>
+            <input type="text" id="quote" placeholder="Schrijf je favoriete quote">
+        </div>
+        <div class="row">
+            <label for="eten">Favoriete eten:</label>
+            <select id="eten" size="3" multiple>
+                <option>Hamburger</option>
+                <option>Hot-dog</option>
+                <option>Pizza</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="browser">Favoriete browser:</label>
+            <input type="text" id="browser">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Beveiliging & contact</legend>
+        <div class="row">
+            <label for="wachtwoord">Wachtwoord*:</label>
+            <input type="password" id="wachtwoord" required>
+        </div>
+        <div class="row">
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" placeholder="Geef je e-mailadres in">
+        </div>
+        <div class="row">
+            <label for="site">Favoriete site:</label>
+            <input type="url" id="site" placeholder="Geef de URL van je favoriete">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Extra informatie</legend>
+        <div class="row">
+            <label for="getal1">Favoriete getal tussen 1-10:</label>
+            <input type="number" id="getal1" min="1" max="10">
+        </div>
+        <div class="row">
+            <label for="getal2">Favoriete getal tussen 11-1000:</label>
+            <input type="range" id="getal2" min="11" max="1000">
+        </div>
+        <div class="row">
+            <label for="geboortedatum">Wanneer ben je geboren?</label>
+            <input type="date" id="geboortedatum">
+        </div>
+        <div class="row">
+            <label for="postcode">Belgische postcode*:</label>
+            <input type="text" id="postcode" placeholder="9999" pattern="[0-9]{4}" required>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Varia</legend>
+        <div class="row">
+            <label for="zoeken">Zoeken naar iets:</label>
+            <input type="search" id="zoeken">
+        </div>
+        <div class="row">
+            <label for="kleur">Wat is je lievelingskleur?</label>
+            <input type="color" id="kleur" value="#000000">
+        </div>
+        <div class="row">
+            <input type="file" id="bestand">
+        </div>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+
+</form>
+<script src="javascript/script.js"></script>
+</body>
+</html>z
