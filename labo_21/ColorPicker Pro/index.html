@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>ColorPicker Pro</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    <h1>ColorPicker Pro</h1>
+
+    <div id="container">
+        <!-- Sliders voor R, G, B -->
+        <div class="sliders">
+            <label>
+                Rood: <span id="rValue">0</span>
+                <input type="range" id="rSlider" min="0" max="255" value="0">
+            </label>
+            <label>
+                Groen: <span id="gValue">0</span>
+                <input type="range" id="gSlider" min="0" max="255" value="0">
+            </label>
+            <label>
+                Blauw: <span id="bValue">0</span>
+                <input type="range" id="bSlider" min="0" max="255" value="0">
+            </label>
+        </div>
+
+        <!-- Voorbeeldvlak met huidige kleur -->
+        <div id="preview"></div>
+
+        <!-- Hex-code van de huidige kleur -->
+        <p>Hex: <span id="hexCode">#000000</span></p>
+
+        <!-- Knop om huidige kleur als favoriet op te slaan -->
+        <button id="addFavorite">Voeg toe aan favorieten</button>
+        <button id="clearFavorites">Wis favorieten</button>
+
+        <!-- Lijst met favoriete kleuren -->
+        <h2>Favoriete kleuren</h2>
+        <div id="favorites"></div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

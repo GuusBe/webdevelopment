@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2em;
+}
+
+button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#teller {
+    font-weight: bold;
+    color: #c8102e;
+}
